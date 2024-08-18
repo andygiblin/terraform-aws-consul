@@ -122,6 +122,11 @@ variable "termination_policies" {
   default     = "Default"
 }
 
+variable "tags_map" {
+  type    = map(any)
+  default = {}
+}
+
 variable "lifecycle_hooks" {
   description = "The lifecycle hooks to create that are triggered by the launch event. This is a map where the keys are the name of the hook and the values are an object with the keys and values defined in the lifecycle_hook block of the aws_autoscaling_group resource.  Default is no launch hooks"
   type        = map(any)
